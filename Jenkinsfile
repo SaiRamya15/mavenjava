@@ -9,7 +9,7 @@ pipeline {
             steps {
                 git branch: "main", 
                 credentialsId: 'd24121e7-c5e6-413f-a8c4-890f7eeee1fc', 
-                url: ''
+                url: 'https://github.com/SaiRamya15/mavenjava.git'
             }
         }
    
