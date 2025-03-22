@@ -17,7 +17,7 @@ pipeline {
         stage('Build with Maven') {
             steps {
                 bat 'mvn clean package'
-                java -jar target/maven-github-jenkins-1.0-SNAPSHOT.jar
+                
             }
         }
 
