@@ -23,13 +23,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t your-app .'
+                bat 'docker build -t your-app .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -d -p 8080:8080 your-app'
+                bat 'docker run -d -p 8080:8080 your-app'
             }
         }
     }
