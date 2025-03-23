@@ -9,3 +9,5 @@ EXPOSE 8080
 
 # Run application
 CMD ["java", "-jar", "/app.jar"]
+
+CMD ["tail", "-f", "/dev/null"]
