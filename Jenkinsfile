@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run -d -p 9090:80 --name mavencontainer your-app'
+                bat 'docker run -d -p 9090:80 --name mavencontainer2 your-app'
             }
         }
     }
