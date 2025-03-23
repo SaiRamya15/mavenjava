@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run -d --name mycont -p 9090:80 your-app'
+                bat 'docker run -d --name cont -p 9090:80 your-app'
             }
         }
     }
