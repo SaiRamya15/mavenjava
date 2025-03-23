@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run -it -p 9090:80 --name mavenlatestjava your-app'
+                bat 'winpty docker run -it -p 9090:80 --name mavenlatestjava your-app'
             }
         }
     }
