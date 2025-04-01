@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: "main", 
-                credentialsId: '90093c89-d140-4333-8833-7ceefc2d7ebe', 
+                credentialsId: 'd24121e7-c5e6-413f-a8c4-890f7eeee1fc', 
                 url: 'https://github.com/SaiRamya15/mavenjava.git'
             }
         }
