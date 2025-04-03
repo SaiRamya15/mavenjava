@@ -1,0 +1,17 @@
+pipeline{
+agent any
+stages{
+stage("AWS"){
+steps{
+withCredentials([[
+    $class: 'AmazonWebServicesCredentailsBinding',
+    credentialsId: 'e89f3e9d-58e5-498a-8610-1afd8f301244',
+    accessKeyVariable: 'AKIAU5LH5U2UP22GIAGH',
+    secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+    bat "aws s3 ls"
+}
+}
+}
+}
+}
+
