@@ -1,7 +1,11 @@
 package com.example;
 
-public class App {
-    public static void main(String[] args) {
-        System.out.println("Hello, Jenkins with Maven and GitHub!");
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class AppTest {
+    @Test
+    void testApp() {
+        assertEquals("Hello", "Hello");
     }
 }
