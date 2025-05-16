@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+  /*      stage('Build Docker Image') {
             steps {
                 bat 'docker build -t your-app .'
             }
@@ -33,4 +33,27 @@ pipeline {
             }
         }
     }
+}*/
+         stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    bat '''
+                            mvn sonar:sonar ^
+                              -Dsonar.projectKey=my-maven-app ^
+                              -Dsonar.host.url=http://localhost:9000 ^
+                              -Dsonar.login=squ_4c861f4b68932a119f73d5ffd385ccd0fc4edee8
+                        '''
+                }
+            }
+        }
+
+        stage('Quality Gate') {
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+    }
 }
+
