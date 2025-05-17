@@ -10,7 +10,21 @@ public class AppTest {
     }
 }*/
 
-package com.example;
+import java.util.logging.Logger;
+
+class MyClass {
+
+  Logger logger = Logger.getLogger(getClass().getName());
+
+  public void doSomething() {
+    // ...
+    logger.info("My Message");  // Compliant, output via logger
+    // ...
+  }
+}
+
+
+/*package com.example;
 
 public class App {
     public String getMessage() {
@@ -20,4 +34,4 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
-}
+}*/
