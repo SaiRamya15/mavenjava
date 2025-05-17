@@ -6,8 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AppTest {
 
     @Test
-    public void testGetMessage() {
+    public void testGetGreeting() {
         App app = new App();
-        assertEquals("Hello, Jenkins!", app.getMessage());
+        String result = app.getGreeting();  // ✅ Correct method call
+        assertEquals("Hello from App!", result);
     }
 }
