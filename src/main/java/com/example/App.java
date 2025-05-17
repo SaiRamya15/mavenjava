@@ -1,4 +1,4 @@
-/*package com.example;
+package com.example;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,9 +8,9 @@ public class AppTest {
     void testApp() {
         assertEquals("Hello", "Hello");
     }
-}*/
+}
 
-import java.util.logging.Logger;
+/*import java.util.logging.Logger;
 
 class MyClass {
 
@@ -21,7 +21,7 @@ class MyClass {
     logger.info("My Message");  // Compliant, output via logger
     // ...
   }
-}
+}*/
 
 
 /*package com.example;
