@@ -1,31 +1,5 @@
 /*package com.example;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class AppTest {
-    @Test
-    void testApp() {
-        assertEquals("Hello", "Hello");
-    }
-}*/
-
-/*import java.util.logging.Logger;
-
-class MyClass {
-
-  Logger logger = Logger.getLogger(getClass().getName());
-
-  public void doSomething() {
-    // ...
-    logger.info("My Message");  // Compliant, output via logger
-    // ...
-  }
-}*/
-
-
-package com.example;
-
 public class App {
     public String getMessage() {
         return "Hello, Jenkins!";
@@ -33,5 +7,25 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
+    }
+}*/
+
+
+package com.example;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class App {
+
+    private static final Logger logger = LoggerFactory.getLogger(App.class);
+
+    public static void main(String[] args) {
+        logger.info("Application started.");
+    }
+
+    public String getGreeting() {
+        logger.debug("getGreeting() called");
+        return "Hello from App!";
     }
 }
