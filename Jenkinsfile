@@ -36,7 +36,7 @@ pipeline {
 }*/
          stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                script{
                     bat '''
                             mvn sonar:sonar ^
                               -Dsonar.projectKey=my-maven-app ^
