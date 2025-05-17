@@ -1,4 +1,4 @@
-package com.example;
+/*package com.example;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +8,7 @@ public class AppTest {
     void testApp() {
         assertEquals("Hello", "Hello");
     }
-}
+}*/
 
 /*import java.util.logging.Logger;
 
@@ -24,7 +24,7 @@ class MyClass {
 }*/
 
 
-/*package com.example;
+package com.example;
 
 public class App {
     public String getMessage() {
@@ -34,4 +34,4 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
-}*/
+}
