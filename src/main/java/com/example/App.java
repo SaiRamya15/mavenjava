@@ -12,7 +12,7 @@ public class App {
 
 import java.util.logging.Logger;
 
-class MyClass {
+class App {
 
   Logger logger = Logger.getLogger(getClass().getName());
 
